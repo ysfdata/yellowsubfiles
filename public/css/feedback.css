@@ -1,0 +1,56 @@
+@import "/css/constants.css";
+
+#contact {
+    width:100%; 
+    height:100%; 
+    margin: 0 auto; 
+    background: var(--bgGrey); 
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width:960px; 
+    height:auto; 
+    margin: 0 auto; 
+    padding: 50px 0;
+}
+
+#contact .container form input,
+#contact .container form textarea {
+	width:97.4%;
+	height:30px;
+	padding:5px 10px;
+	font-size: 12px;
+	color:#000;
+	letter-spacing:1px;
+	background: #FFF;
+	border:2px solid #FFF;
+	margin-bottom:25px;
+  -webkit-transition:all .1s ease-in-out;
+	-moz-transition:all .1s ease-in-out;
+	-ms-transition:all .1s ease-in-out;
+	-o-transition:all .1s ease-in-out;
+	transition:all .1s ease-in-out;}
+
+#contact .container form input:focus,
+#contact .container form textarea:focus {
+	border:2px solid var(--activeColor);
+	color:#999;}
+
+#contact .container form textarea {
+	height:150px;}
+
+.submit {
+    width: 97.4%;
+}
+
+.feedbackSuccess {
+    width: 97.4%;
+    border: 2px solid rgba(0,255,0,1);
+    background: rgba(0,255,0,0.3);
+}
+.feedbackFailed {
+    width: 97.4%;
+    border: 2px solid rgba(255,0,0,1);
+    background: rgba(255,0,0,0.3);
+}

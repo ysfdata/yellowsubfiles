@@ -1,0 +1,74 @@
+@import "/css/constants.css";
+
+body {
+    height: 100%;
+        color: var(--textColor);
+    text-shadow:
+        -1px -1px 5px rgba(50,50,50,0.5),
+        1px -1px 5px rgba(50,50,50,0.5),
+        -1px 1px 5px rgba(50,50,50,0.5),
+        1px 1px 5px rgba(50,50,50,0.5);
+}
+
+form {
+    display: table;
+}
+
+.parentName {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.parentAddress {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.childName {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.phoneNumbers {
+    margin-bottom: 5px;
+}
+
+.parentEmail {
+    margin-bottom: 5px;
+}
+
+.childBirthday {
+    margin-bottom: 5px;
+}
+
+.titleRow {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+p {
+    display: table-row;
+    font-family: "MechanicalMachine", arial, sans-serif;
+    font-size: 18px;
+}
+
+label {
+    display: table-cell;
+    font-family: "MechanicalMachine", arial, sans-serif;
+}
+
+input {
+    display: table-cell;
+    margin: 2px 5px;
+}
+
+.saveBtn {
+    width: 25%;
+    border-radius: 0px 20px 20px 0px;
+}
+
+input:focus {
+    border: 2px solid var(--activeColor);
+}

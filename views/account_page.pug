@@ -1,0 +1,65 @@
+head
+    link(type="text/css", rel="stylesheet", href="/css/account.css")
+body
+    div
+        form(method="post", action="updateAccount")
+            div.parentName
+                p.titleRow Parent Name
+                p
+                    label(for="parentFirst") Name: 
+                    input(type="text", name="parentFirst", placeholder="First", value="" + pageData.firstname)
+                    input(type="text", name="parentLast", placeholder="Last", value="" + pageData.lastname)
+            div.parentEmail
+                p.titleRow Email Address
+                p
+                    input(type="text", name="parentEmail", placeholder="e.g. xxx@gmail.com", value=""+ pageData.email)
+            div.phoneNumbers
+                p.titleRow Phone Numbers
+                p
+                    label 
+                    label(for="homePhone") Home:
+                    input(type="text", name="homePhone", placeholder="XXX-XXX-XXXX", value="" + pageData.homePhone)
+                    label(for="cellPhone") Cell:
+                    input(type="text", name="cellPhone", placeholder="XXX-XXX-XXXX", value="" + pageData.cellPhone)
+                    label(for="workPhone") Work:
+                    input(type="text", name="workPhone", placeholder="XXX-XXX-XXXX", value="" + pageData.workPhone)
+            div.parentAddress
+                p.titleRow Address
+                p
+                    label(for="streetAddr") Address Line 1: 
+                    input(type="text", name="streetAddr", placeholder="e.g. 101 1st St", value="" + pageData.address.street)
+                p
+                    label(for="extraAddr") Address Line 2:
+                    input(type="text", name="extraAddr", placeholder="")
+                p
+                    label(for="cityState") City, State: 
+                    input(type="text", name="cityState", placeholder="e.g. Somewhere, Ohio", value="" + pageData.address.cityState)
+                p
+                    label(for="zip") Zip:
+                    input(type="text", name="zip", placeholder="e.g. 12345", value="" + pageData.address.zip)
+            div.childName
+                p.titleRow Child Name
+                p
+                    label(for="childFirst") Name:
+                    input(type="text", name="childFirst", placeholder="First", value="" + pageData.childsFirst)
+                    input(type="text", name="childLast", placeholder="Last", value="" + pageData.childsLast)
+            div.childBirthday
+                p.titleRow Child's Birthday
+                p
+                    label(for="birthday") Date:
+                    input(type="date", name="birthday", placholder="XX/XX/XXXX", value="" + pageData.birthday)
+            div.emergencyContact
+                p.titleRow Emergency Contact
+                p
+                    label(for="emerFirst") Name:  
+                    input(type="text", name="emerFirst", placeholder="First", value="" + pageData.emerFirst)
+                    input(type="text", name="emerLast", placeholder="Last", value="" + pageData.emerLast)
+                p
+                    label(for="emerAddr") Address: 
+                    input(type="text", name="emerAddr", placeholder="Street Number", value="" + pageData.emerAddress.street)
+                    input(type="text", name="emerCityState", placeholder="City, State", value="" + pageData.emerAddress.cityState)
+                    input(type="text", name="emerZip", placeholder="Zip", value="" + pageData.emerAddress.zip)
+                p
+                    label(for="emerPhone") Phone:
+                    input(type="text", name="emerPhone", placeholder="XXX-XXX-XXXX", value="" + pageData.emerPhone)
+            button.saveBtn(type="submit") Save

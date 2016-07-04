@@ -1,0 +1,29 @@
+@import "/css/constants.css";
+ 
+body {
+    background-color: var(--bgColor);
+    height: 100%;
+}
+
+/*For Debugging purposes only*/
+/*div {
+  border-style: solid;
+  border-width: 1px;  
+}*/
+
+.formsDiv {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+
+.registerDiv {
+    position: relative;
+    z-index: 1;
+    background: var(--bgGrey);
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2), 0 5px 5px 0 rgba(0,0,0,0.24);
+}

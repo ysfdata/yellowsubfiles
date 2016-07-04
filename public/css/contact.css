@@ -1,0 +1,11 @@
+@import "/css/constants.css";
+
+p {
+    font-family: "MechanicalMachine", arial, sans-serif;
+    color: var(--textColor);
+    text-shadow:
+        -1px -1px 5px rgba(50,50,50,0.5),
+        1px -1px 5px rgba(50,50,50,0.5),
+        -1px 1px 5px rgba(50,50,50,0.5),
+        1px 1px 5px rgba(50,50,50,0.5);
+}
