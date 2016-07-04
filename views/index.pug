@@ -1,0 +1,37 @@
+head
+    title
+        | Yellow Submarine Family Daycare
+    link(rel="stylesheet",type="text/css",href="/css/index.css")
+        
+body
+    div.titleBar
+        div.titleImageDiv
+            img.titleImage(src="/resources/ysficon.png",height="160px")
+        div.titleTextDiv
+            p.titleText
+                | Yellow Submarine Family
+                br
+                | Daycare
+    div.formsDiv
+        if (pageData !== undefined && pageData.loginError)
+            p.loginError Invalid username/password specified. Please try again.
+        div.loginDiv
+           form.loginForm(action="login", method="POST")
+                input.username(type='text', name="username", placeholder="Username")
+                input.password(type='password', name="password", placeholder="Password")
+                button.loginButton(type="submit")
+                    | login
+                p.registerMsg
+                    | Not registered? 
+                    a(href="/signup")
+                        | Create an account
+    div.footer
+        p.footerText
+            | &copy;
+            script.
+                new Date().getFullYear()>2010&&document.write(new Date().getFullYear() + " "); 
+            | Yellow Submarine Family LLC.
+            br
+            a(href="#")
+                | Contact Us
+            |  with questions or comments.

@@ -1,0 +1,52 @@
+head
+    title Account Page
+    link(type="text/css", rel="stylesheet", href="/css/home.css")
+body
+    div.titleBar
+        div.titleImageDiv
+            img.titleImage(src="/resources/ysficon.png",height="160px")
+        div.titleTextDiv
+            p.titleText
+                | Yellow Submarine Family
+                br
+                | Daycare
+    div.logOut
+        form(method="post" action="/logout")
+            button(type="submit") Logout
+    div(style="clear:both;")
+    div.tabordion
+        section(id="section1")
+            input(type="radio" name="sections" id="option1" checked)
+            label(for="option1") Account
+            content
+                iframe(src="account_page", name="accountTarget", allowTransparency="true", scrolling="no", frameborder= "0")
+        section(id="section2")
+            input(type="radio" name="sections" id="option2")
+            label(for="option2") Watch Cameras
+            content
+                p Camera stuff goes here.
+        section(id="section3")
+            input(type="radio" name="sections" id="option3")
+            label(for="option3") Pay Bill
+            content
+                p Payment stuff goes here.
+        section(id="section4")
+            input(type="radio" name="sections" id="option4")
+            label(for="option4") Leave Feedback
+            content
+                iframe(src="feedback_form", name="feedbackTarget", allowTransparency="true", scrolling="no", frameborder="0")
+        section(id="section5")
+            input(type="radio" name="sections" id="option5")
+            label(for="option5") Contact Us
+            content
+                iframe(src="contact_info", name="contactTarget", allowTransparency="true", scrolling="no", frameborder="0")
+    div.footer
+        p.footerText
+            | &copy;
+            script.
+                new Date().getFullYear()>2010&&document.write(new Date().getFullYear() + " "); 
+            | Yellow Submarine Family LLC.
+            br
+            a(href="#")
+                | Contact Us
+            |  with questions or comments.

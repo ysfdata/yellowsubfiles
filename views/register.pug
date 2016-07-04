@@ -1,0 +1,36 @@
+head
+    title
+        | Register for an Account
+    link(rel="stylesheet",type="text/css",href="/css/register.css")
+        
+body
+    div.titleBar
+        div.titleImageDiv
+            img.titleImage(src="/resources/ysficon.png",height="160px")
+        div.titleTextDiv
+            p.titleText
+                | Yellow Submarine Family
+                br
+                | Daycare
+    div.formsDiv
+        div.registerDiv
+            form.registerForm(action="signup", method="POST")
+                input.username(type='text', name="username", placeholder="Username", required)
+                input.password(type='password', name="password", min="6", placeholder="Password", required)
+                input.confirmPassword(type="password", name="confirmPassword", placeholder="Confirm Password", required)
+                input.email(type="email", name="email", placeholder="Email Address", required)
+                input.confirmEmail(type="email", name="confirmEmail", placeholder="Confirm Email Address", required)
+                input.childFirst(type="text", name="childFirst", placeholder="Your child's first name", required)
+                input.childLast(type="text", name="childLast", placeholder="Your child's last name", required)
+                button.loginButton(type="submit")
+                    | register
+    div.footer
+        p.footerText
+            | &copy;
+            script.
+                new Date().getFullYear()>2010&&document.write(new Date().getFullYear() + " "); 
+            | Yellow Submarine Family LLC.
+            br
+            a(href="#")
+                | Contact Us
+            |  with questions or comments.

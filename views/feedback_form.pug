@@ -1,0 +1,15 @@
+head
+    link(type="text/css", rel="stylesheet", href="/css/feedback.css")
+body
+    section(id="contact")
+        div.container
+            if (pageData.emailStatus === undefined)
+            else if (pageData.emailStatus === true)
+                p.feedbackSuccess Successfully sent feedback!
+            else if (pageData.emailStatus === false)
+                p.feedbackFailed Failed to send feedback. Please try again later.
+            form(name="htmlform", method="post", action="submitFeedback")
+                input(type="text",name="first_name", placeholder="First Name", value="" + pageData.user.firstname)
+                input(type="email", name="email", placeholder="E-Mail", value="" + pageData.user.email)
+                textarea(name="comments", placeholder="Message")
+                button.submit(name="send", type="submit") SEND
